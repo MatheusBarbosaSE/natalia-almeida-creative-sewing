@@ -7,3 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
     hero.classList.add("hero-animate");
   }, 300); // delay in milliseconds
 });
+
+// Mobile menu toggle
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});

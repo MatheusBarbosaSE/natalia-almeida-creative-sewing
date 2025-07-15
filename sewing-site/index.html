@@ -5,48 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Natalia Almeida - Costura Criativa</title>
 
-  <!-- Link to Google Font (Quicksand) -->
+  <!-- Google Font: Quicksand -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Link to external stylesheet -->
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Main navigation bar -->
+  <!-- Navigation bar with logo and menu -->
   <header>
     <nav class="navbar">
       <div class="logo">
-        <picture>
-          <img src="assets/images/banner.png" alt="Logo Costura Criativa" class="logo-img">
-        </picture>
+        <img src="assets/images/banner.png" alt="Logo Costura Criativa" class="logo-img" />
       </div>
 
-      <ul class="nav-links">
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
+      <!-- Hamburger button (only visible on small screens) -->
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <!-- Navigation links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
         <li><a href="#produtos">Produtos</a></li>
         <li><a href="#contatos">Contatos</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero section with full background -->
+  <!-- Hero section (homepage introduction) -->
   <section id="inicio" class="hero-background">
     <h1>Feito à mão com carinho</h1>
-    <p>Transformamos tecidos em arte! Conheça os produtos personalizados e delicados da Natalia Almeida – Costura Criativa.</p>
+    <p>
+      Transformamos tecidos em arte! Conheça os produtos personalizados e delicados da Natalia Almeida – Costura Criativa.
+    </p>
     <a href="#produtos" class="hero-button">Ver Produtos</a>
   </section>
 
-  <!-- Placeholder sections (to be built) -->
   <main>
-    <section id="sobre"></section>
-    <section id="produtos"></section>
-    <section id="contatos"></section>
+    <!-- Future section: Produtos (to be created later) -->
+    <section id="produtos">
+      <!-- Placeholder for future product grid -->
+    </section>
+
+    <!-- Future section: Contatos (to be created later) -->
+    <section id="contatos">
+      <!-- Placeholder for future contact form or info -->
+    </section>
   </main>
 
-  <!-- JavaScript file -->
+  <!-- JavaScript for animations and menu toggle -->
   <script src="script.js"></script>
 </body>
 </html>

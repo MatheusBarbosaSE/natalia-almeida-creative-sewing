@@ -1,0 +1,133 @@
+/* Global base settings */
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fff;
+  color: #5a3e3e;
+}
+
+/* Reset common default styles */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Transparent navigation bar over hero image */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: transparent;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  max-width: 220px;
+  width: 100%;
+}
+
+.logo-img {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #5a3e3e;
+  font-weight: 500;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7);
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  border-radius: 8px;
+  padding: 0.25rem 0.5rem;
+}
+
+.nav-links a:hover {
+  background-color: rgba(204, 88, 105, 0.1);
+}
+
+/* Hero section with full-screen background image */
+.hero-background {
+  height: 100vh;
+  background-image: url('assets/images/background-image.png');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.hero-background h1 {
+  font-size: 3rem;
+  color: #cc5869;
+  margin-bottom: 1rem;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.hero-background p {
+  font-size: 1.25rem;
+  color: #5a3e3e;
+  max-width: 700px;
+  margin-bottom: 2rem;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.hero-button {
+  background-color: #cc5869;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(20px);
+  box-shadow: none;
+}
+
+.hero-button:hover {
+  background-color: #a94855;
+  cursor: pointer;
+}
+
+.hero-animate h1,
+.hero-animate p,
+.hero-animate .hero-button {
+  opacity: 1;
+  transform: translateY(0);
+}

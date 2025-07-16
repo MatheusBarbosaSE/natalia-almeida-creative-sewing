@@ -1,6 +1,6 @@
 /* Global base settings */
 html {
-  scroll-behavior: auto;
+  scroll-behavior: auto; /* Default scroll behavior */
 }
 
 body {
@@ -22,20 +22,19 @@ a {
   color: inherit;
 }
 
-/* Transparent navigation bar over hero image */
+/* Navigation bar with soft background (scrolls with the page) */
 .navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
-  background-color: transparent;
+  padding: 0.75rem 1.5rem;
+  background-color: #FFE4C4;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
+/* Logo container */
 .logo {
   display: flex;
   align-items: center;
@@ -43,6 +42,7 @@ a {
   width: 100%;
 }
 
+/* Logo image */
 .logo-img {
   max-width: 220px;
   width: 100%;
@@ -50,6 +50,7 @@ a {
   display: block;
 }
 
+/* Navigation links */
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -84,6 +85,7 @@ a {
   padding: 0 2rem;
 }
 
+/* Hero title */
 .hero-background h1 {
   font-size: 3rem;
   color: #cc5869;
@@ -94,6 +96,7 @@ a {
   transition: all 0.8s ease-out;
 }
 
+/* Hero paragraph */
 .hero-background p {
   font-size: 1.25rem;
   color: #5a3e3e;
@@ -105,6 +108,7 @@ a {
   transition: all 0.8s ease-out;
 }
 
+/* Hero button */
 .hero-button {
   background-color: #cc5869;
   color: #fff;
@@ -125,6 +129,7 @@ a {
   cursor: pointer;
 }
 
+/* Hero animations on scroll */
 .hero-animate h1,
 .hero-animate p,
 .hero-animate .hero-button {
@@ -132,7 +137,7 @@ a {
   transform: translateY(0);
 }
 
-/* Hamburger button hidden by default */
+/* Mobile menu button (hamburger) */
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -140,7 +145,7 @@ a {
   color: #5a3e3e;
 }
 
-/* Responsive adjustments for screens smaller than 768px */
+/* Responsive menu behavior for small screens */
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
@@ -157,6 +162,10 @@ a {
     z-index: 999;
   }
 
+  .nav-links.active {
+    display: flex;
+  }
+
   .nav-links a {
     font-size: 1.1rem;
     font-weight: 500;
@@ -164,23 +173,108 @@ a {
     padding: 0.25rem 0;
   }
 
-  .nav-links.active {
-    display: flex;
-  }
-
   .menu-toggle {
-  display: block;
-  font-size: 2rem;
-  color: #5a3e3e;
-  background-color: transparent;
-  padding: 0.3rem 0.6rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+    display: block;
+    font-size: 2rem;
+    color: #5a3e3e;
+    background-color: transparent;
+    padding: 0.3rem 0.6rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
 
   .menu-toggle:hover {
     background-color: rgba(204, 88, 105, 0.1);
   }
+
+  /* Responsive fix for about text box */
+  .about-text-box {
+    margin: 2rem auto;               
+    padding: 2rem 1.5rem;           
+    width: calc(100% - 3rem);     
+    max-width: 500px;
+    box-sizing: border-box;
+  }
+
+  section.sobre-template {
+    padding-top: 1.0rem !important;
+  }
 }
 
+/* About section layout */
+.sobre-template {
+  padding: 8rem 2rem 5rem;
+  background-color: #ffffff;
+}
+
+.sobre-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* About image block */
+.about-image {
+  flex: 1 1 45%;
+  min-width: 280px;
+  max-width: 500px;
+}
+
+.about-image {
+  margin-top: -3.0rem;
+}
+
+.about-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 0rem;
+}
+
+/* About text box */
+.about-text-box {
+  background-color: #FFE4C4;
+  padding: 3rem;
+  border-radius: 0rem;
+  flex: 1 1 45%;
+  min-width: 280px;
+  max-width: 600px;
+  margin-top: 3rem;
+}
+
+/* About text styles */
+.about-text h2 {
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* About call-to-action button */
+.about-button {
+  display: inline-block;
+  background-color: #f5f2ef;
+  color: #111;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.about-button:hover {
+  background-color: #e9e6e2;
+  cursor: pointer;
+}
